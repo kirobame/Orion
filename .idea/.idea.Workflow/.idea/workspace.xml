@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="909f901e-209d-4d98-80e3-8986ae786965" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/OrionGUIUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/RelayedValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/PropertyValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Remote/StackToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Managment/PoolableWrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/ValueHolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/WrappedValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Orion/Assets/Scripts/Orion/Editor/Drawers/RelayDrawer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Ludiq/Ludiq.PeekCore/Editor/Interface/Textures/EditorTexture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Ctrl-Alt/FarAwayCage/Assets/Plugins/WanzyeeStudio/Scripts/Editor/Drawer/Property/EventDrawer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Ludiq/Ludiq.Peek/Editor/Context/GameObjectContextMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Players/AudioPlayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/AudioBundle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9B956647-017D-4DC1-B8D3-D25EEF012467/ce/aa86d888/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/AudioSourceHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/StandardAudioBundle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SomeStruct.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Filters/HighpassFilter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Filters/ReverbFilter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Filters/LowpassFilter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Filters/EchoFilter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Filters/ChorusFilter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BC2876E8-FF0B-42A2-A2A1-1B51F2B23C8A/46/bd2ad2fb/AudioChorusFilter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Presets/BypassesPreset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Filters/AudioFilter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Filters/DistorsionFilter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Presets/SoundPreset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Presets/CurvesPreset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Presets/OutputPreset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Presets/AudioPreset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Presets/SpatializationPreset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Managment/Poolable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Managment/Pool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SomeModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Bundles/AudioBundle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Remote/DynamicToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Remote/DynamicKey.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50FE65A4-93A0-4952-84F1-E3562EFBE38D/df/0fdb5f91/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Orion/Assets/Scripts/Orion/Event.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/OrionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/PersistentCallBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/PersistentCall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE47BE73-F7EF-409C-A5E5-CE4B121745B7/66/3eb58f44/YieldInstruction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Relays/AudioRelay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Orion/Assets/Scripts/Orion/Relay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE47BE73-F7EF-409C-A5E5-CE4B121745B7/dc/0d183e92/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE47BE73-F7EF-409C-A5E5-CE4B121745B7/7f/2b3d9cdf/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Inputs/Module.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/OrionEventBaseDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE47BE73-F7EF-409C-A5E5-CE4B121745B7/64/c1b8b3de/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SomeRelay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/PropertyValueDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Remote/Repository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/PersistentCallDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/AlteredValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/AlteredValueDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Remote/Token.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/RelayedValueDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/ProxyCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/WrappedValueDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Core/IYieldOption.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Routines/Routine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Routines/RoutineExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Routines/TimedRoutine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Inputs/IBinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Inputs/Binder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Inputs/Module.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Inputs/InputActionLink.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Editor/Drawer/WrappedValueDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Inputs/InputHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Orion/Editor/Drawer/InputHandlerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Inputs/Module.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/OrionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/ProxyCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Attributes/TypeIcon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Attributes/TypeIconAttribute.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/ProxyDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/ProxyAttributeDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/RelayedValue.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/TypeIconAttributeDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SomeRelay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/PersistentCallBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/PersistentCallDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Attributes/InlineProxyAttribute.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/ValueHolder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/OrionGUIUtility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/PropertyValue.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/PropertyValueDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/InlineProxyAttributeDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/WrappedValue.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/AlteredValueDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/WrappedValueDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawer/RelayedValueDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/AlteredValue.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Remote/DynamicAccessor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Relays/AudioFilter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Relays/AudioBundle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Relays/AudioPreset.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Remote/DynamicToken.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Remote/DynamicKey.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Remote/Repository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Remote/Token.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Managment/Pool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Relays/AudioRelay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Managment/PoolableWrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Managment/Poolable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/StandardAudioBundle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/PersistentCall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/AudioBundle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/AudioSourceHandler.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hYzdSRCZpjfKBwS9ITMAvq4gzY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="909f901e-209d-4d98-80e3-8986ae786965" name="Default Changelist" comment="" />
+      <created>1600202910652</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600202910652</updated>
+      <workItem from="1600202943862" duration="1501000" />
+      <workItem from="1600240662668" duration="25197000" />
+      <workItem from="1600326995982" duration="29119000" />
+      <workItem from="1600414251352" duration="22920000" />
+      <workItem from="1600517270734" duration="9019000" />
+      <workItem from="1600614234710" duration="2665000" />
+      <workItem from="1600677350877" duration="1335000" />
+      <workItem from="1600705714575" duration="5640000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="WindowStateProjectService">
+    <state x="-1126" y="221" key="RiderGenerateDialog" timestamp="1600709808298">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1126" y="221" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1600709808298" />
+    <state x="-1304" y="240" key="run.anything.popup" timestamp="1600615850949">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1304" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1600615850949" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600709570628">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1600709570628" />
+  </component>
+</project>
