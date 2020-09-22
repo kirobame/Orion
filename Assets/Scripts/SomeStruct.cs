@@ -1,5 +1,11 @@
-﻿public struct SomeStruct
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
+
+public struct SomeStruct
 {
-    public int number;
-    public string text;
+    public float Number => number;
+    public string Text => text;
+    
+    [SerializeField] private float number;
+    [SerializeField] private string text;
 }
