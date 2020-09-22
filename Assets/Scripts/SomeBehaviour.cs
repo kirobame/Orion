@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Orion;
 using Sirenix.OdinInspector;
-using Sirenix.Utilities;
-using Sirenix.Utilities.Editor;
-using UnityEditor;
 using UnityEngine;
 
 public class SomeBehaviour : SerializedMonoBehaviour
 {
-    public OrionEvent otherEvent = new OrionEvent();
+    [SerializeField] private OrionEvent someEvent = new OrionEvent();
 
-    [Button]
-    private void Invoke() => otherEvent.Invoke();
+    public void Log(SomeStruct someStruct, float number, GameObject obj)
+    {
+        Debug.Log($"{someStruct.Number} / {someStruct.Text} || {number} || {obj.name}");
+    }
 }
