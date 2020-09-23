@@ -1278,17 +1278,18 @@
                   <e p="PersistentCall.cs" t="Include" />
                   <e p="PersistentCallBase.cs" t="Include" />
                 </e>
+                <e p="VoidListener.cs" t="Include" />
               </e>
               <e p="Management" t="Include">
                 <e p="DynamicToken.cs" t="Include" />
                 <e p="Pool" t="Include">
                   <e p="Pool.cs" t="Include" />
                   <e p="Poolable.cs" t="Include" />
-                  <e p="PoolableWrapper.cs" t="Include" />
                 </e>
                 <e p="Referencer" t="Include">
                   <e p="IReferencer.cs" t="Include" />
                   <e p="Referencer.cs" t="Include" />
+                  <e p="ReferencerBase.cs" t="Include" />
                   <e p="StackReferencer.cs" t="Include" />
                 </e>
                 <e p="Repository.cs" t="Include" />
@@ -1299,6 +1300,7 @@
               </e>
               <e p="Proxies" t="Include">
                 <e p="Generics" t="Include">
+                  <e p="AssetProvider.cs" t="Include" />
                   <e p="PropertyValue.cs" t="Include" />
                   <e p="WrappedValue.cs" t="Include" />
                 </e>
@@ -1311,7 +1313,6 @@
                 </e>
                 <e p="Tokens" t="Include">
                   <e p="DynamicTokenProxy.cs" t="Include" />
-                  <e p="ReferenceProxy.cs" t="Include" />
                   <e p="TokenProxy.cs" t="Include" />
                 </e>
               </e>
@@ -1329,6 +1330,7 @@
             <e p="Editor" t="Include">
               <e p="Drawers" t="Include">
                 <e p="MethodSelectorAttributeDrawer.cs" t="Include" />
+                <e p="OrionEventDrawer.cs" t="Include" />
                 <e p="PersistentCallDrawer.cs" t="Include" />
                 <e p="PropertySelectorAttributeDrawer.cs" t="Include" />
                 <e p="ProxyDrawer.cs" t="Include" />
@@ -1337,6 +1339,16 @@
                 <e p="EditorItems.cs" t="Include" />
                 <e p="OrionGUIUtility.cs" t="Include" />
               </e>
+              <e p="Windows" t="Include">
+                <e p="ProxyCreator.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Templates" t="Include">
+              <e p="ExtendedRemoteValue.txt" t="Include" />
+              <e p="Listener.txt" t="Include" />
+              <e p="RemoteEvent.txt" t="Include" />
+              <e p="RemoteValue.txt" t="Include" />
+              <e p="ValueHolder.txt" t="Include" />
             </e>
           </e>
           <e p="Sirenix" t="Include">
@@ -1371,7 +1383,21 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="ISomeInterface.cs" t="Include" />
+          <e p="LightHandler.cs" t="Include" />
+          <e p="LightPool.cs" t="Include" />
+          <e p="Procedural" t="Include">
+            <e p="Vector2" t="Include">
+              <e p="ExtendedRemoteVector2.cs" t="Include" />
+              <e p="RemoteVector2.cs" t="Include" />
+              <e p="RemoteVector2Event.cs" t="Include" />
+              <e p="Vector2Holder.cs" t="Include" />
+              <e p="Vector2Listener.cs" t="Include" />
+            </e>
+          </e>
           <e p="SomeBehaviour.cs" t="Include" />
+          <e p="SomeClass.cs" t="Include" />
+          <e p="SomeRelay.cs" t="Include" />
           <e p="SomeStruct.cs" t="Include" />
         </e>
       </e>

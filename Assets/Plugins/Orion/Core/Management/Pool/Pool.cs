@@ -7,19 +7,22 @@ using Object = UnityEngine.Object;
 
 namespace Orion
 {
-    public abstract class Pool : MonoBehaviour { public abstract void Stock(Object instance); }
-    
-    public abstract class Pool<T> : Pool, IProvider<T> where T : Poolable
+    public abstract class Pool<T> : SerializedMonoBehaviour
     {
-        [SerializeField] private T prefab;
-        [ShowInInspector, ReadOnly] protected List<T> instances = new List<T>();
+        public abstract void Stock(Poolable<T> poolable);
+    }
     
-        private Queue<T> availableInstances = new Queue<T>();
-        private HashSet<T> usedInstances = new HashSet<T>();
+    public abstract class Pool<T,TPoolable> : Pool<T>, IProvider<T> where TPoolable : Poolable<T>
+    {
+        [SerializeField] private TPoolable prefab;
+        [ShowInInspector, ReadOnly] protected List<TPoolable> instances = new List<TPoolable>();
+    
+        private Queue<TPoolable> availableInstances = new Queue<TPoolable>();
+        private HashSet<TPoolable> usedInstances = new HashSet<TPoolable>();
 
         void Awake()
         {
-            instances.AddRange(GetComponentsInChildren<T>(true));
+            instances.AddRange(GetComponentsInChildren<TPoolable>(true));
             foreach (var instance in instances) availableInstances.Enqueue(instance);
         }
 
@@ -29,8 +32,7 @@ namespace Orion
             for (var i = 0; i < count - availableInstances.Count; i++)
             {
                 var instance = Instantiate(prefab, transform);
-                instance.SetOrigin(this);
-                
+
                 instances.Add(instance);
                 availableInstances.Enqueue(instance);
             }
@@ -41,19 +43,19 @@ namespace Orion
                 var instance = availableInstances.Dequeue();
                 
                 Claim(instance);
-                request[i] = instance;
+                request[i] = instance.Value;
             }
 
             return request;
         }
 
-        public T[] RequestSpecific(int count, Func<T, bool> predicate) => RequestSpecific(prefab, count, predicate);
-        public T[] RequestSpecific(T prefab, int count, Func<T, bool> predicate)
+        public T[] RequestSpecific(int count, Func<TPoolable, bool> predicate) => RequestSpecific(prefab, count, predicate);
+        public T[] RequestSpecific(TPoolable prefab, int count, Func<TPoolable, bool> predicate)
         {
             var request = new T[count];
             var index = 0;
 
-            var toRequeue = new List<T>();
+            var toRequeue = new List<TPoolable>();
             while (availableInstances.Count > 0 && index < count)
             {
                 var instance = availableInstances.Dequeue();
@@ -61,7 +63,7 @@ namespace Orion
                 if (predicate(instance) == true)
                 {
                     Claim(instance);
-                    request[index] = instance;
+                    request[index] = instance.Value;
                     
                     index++;
                 }
@@ -80,39 +82,37 @@ namespace Orion
                 instances.Add(instance);
                 usedInstances.Add(instance);
 
-                request[index + i] = instance;
+                request[index + i] = instance.Value;
             }
 
             return request;
         }
 
-        public override void Stock(Object instance)
+        public override void Stock(Poolable<T> poolable) => Stock(poolable as TPoolable);
+        public void Stock(TPoolable poolable)
         {
             if (this == null || !gameObject.activeInHierarchy) return;
-            
-            var castedInstance = instance as T;
-            if (castedInstance == null) return;
-        
-            castedInstance.Reboot();
-            castedInstance.gameObject.SetActive(false);
+
+            poolable.Reboot();
+            poolable.gameObject.SetActive(false);
             
             var routine = new WaitForEndOfFrame().ToRoutine();
-            routine.Append(new ActionRoutine() {action = () => castedInstance.transform.SetParent(transform)});
+            routine.Append(new ActionRoutine() {action = () => poolable.transform.SetParent(transform)});
 
             StartCoroutine(routine.Call);
 
-            availableInstances.Enqueue(castedInstance);
-            if (!usedInstances.Remove(castedInstance)) instances.Add(castedInstance);
+            availableInstances.Enqueue(poolable);
+            if (!usedInstances.Remove(poolable)) instances.Add(poolable);
         }
 
-        private void Claim(T instance)
+        private void Claim(TPoolable poolable)
         {
-            instance.SetOrigin(this);
+            poolable.SetOrigin(this);
             
-            instance.gameObject.SetActive(true);
-            instance.transform.SetParent(null);
+            poolable.gameObject.SetActive(true);
+            poolable.transform.SetParent(null);
             
-            usedInstances.Add(instance);
+            usedInstances.Add(poolable);
         }
         
         object IProvider.GetInstance() => RequestSingle();

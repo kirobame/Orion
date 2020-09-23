@@ -13,11 +13,15 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Repository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Runtime/OrionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Remote/DynamicKey.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Managment/Referencer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/MethodSelectorAttributeDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Managment/StackReferencer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Objects/ExtendedRemoteValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Generics/WrappedValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/ProxyCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Proxies/PropertyValue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Events/ILinkage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Proxies/ValueHolder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Objects/ValueHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Editor/Drawer/PropertyValueDrawer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -29,25 +33,19 @@
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Editor/Drawer/PersistentCallDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Editor/Drawer/OrionEventBaseDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/EditorItems.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE47BE73-F7EF-409C-A5E5-CE4B121745B7/1b/751c2bc4/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Remote/DynamicKey.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Objects/ExtendedRemoteValue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Events/ILinkage.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/IProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Management/Poolable.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/PoolableWrapper.cs" />
         <option value="$PROJECT_DIR$/../../Resources/Zip/Core/Managment/IReferencer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/IReferencer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/DynamicToken.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/IProxy.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Referencer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/StackReferencer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Repository.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/ReferenceProxy.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/TokenProxy.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/WrappedValue.cs" />
@@ -61,13 +59,37 @@
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/DynamicTokenProxy.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Attributes/PropertySelectorAttribute.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/PropertySelectorAttributeDrawer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Generics/WrappedValue.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Listener.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Objects/ValueHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/PersistentCallDrawer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Generics/WrappedValue.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/HideLabelProcessor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/ProxyAttributeProcessor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Referencer/Referencer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Referencer/StackReferencer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ISomeInterface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SomeClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/OrionEventDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Runtime/PersistentCall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Tokens/DynamicTokenProxy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/OrionGUIUtility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/DynamicToken.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Referencer/ReferencerBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Repository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Token.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/AssetProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SomeRelay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Generics/AssetProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/IProvider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SomeStruct.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/PoolableWrapper.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/ProxyDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LightHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Poolable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Pool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LightPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/ProxyCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Listener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -119,6 +141,8 @@
       <option name="presentableId" value="Default" />
       <updated>1600761333736</updated>
       <workItem from="1600761340671" duration="20173000" />
+      <workItem from="1600845797136" duration="15167000" />
+      <workItem from="1600863904255" duration="7097000" />
     </task>
     <servers />
   </component>
@@ -131,13 +155,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1600762852585">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1126" y="236" key="RiderGenerateDialog" timestamp="1600869600977">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1126" y="236" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1600869600977" />
     <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600762852585" />
     <state x="277" y="142" key="SettingsEditor" timestamp="1600763566910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="277" y="142" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600763566910" />
+    <state x="-1343" y="189" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600846129935">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1343" y="189" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1600846129935" />
+    <state x="-1304" y="240" key="run.anything.popup" timestamp="1600846595259">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1304" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1600846595259" />
   </component>
 </project>

@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Linq;
+using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
+using Sirenix.Utilities;
 using Sirenix.Utilities.Editor;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Orion.Editor
 {
@@ -11,6 +15,8 @@ namespace Orion.Editor
     {
         private bool foldout;
         private Texture icon;
+
+        private Rect rect = Rect.zero;
 
         protected override void Initialize()
         {
@@ -20,59 +26,119 @@ namespace Orion.Editor
 
         protected override void DrawPropertyLayout(GUIContent label)
         {
-            label = new GUIContent("  " + label.text, icon);
-            
-            Debug.Log($"{Property.Name} / {Property.ValueEntry.TypeOfValue} / {Property.Children.First().Children.Count}");
-
-            var  count = Property.Children.Count;
-            var subCount = Property.Children.First().Children.Count;
-            
-            if (Property.Attributes.Contains(new InlinedAttribute()) || count == 1 && subCount == 1)
+            if (!Property.BaseValueEntry.BaseValueType.IsInterface)
             {
-                Debug.Log(0);
-                EditorGUILayout.BeginHorizontal();
-                
-                EditorGUILayout.LabelField(label, GUILayout.Width(GUIHelper.BetterLabelWidth));
-                for (var i = 0; i < Property.Children.Count; i++) Property.Children[i].Draw(GUIContent.none);
+                CallNextDrawer(label);
+                return;
+            }
+            
+            var text = label.text.Trim();
+            label = new GUIContent("  " + text, icon);
 
-                var size = EditorGUIUtility.singleLineHeight;
-                if (GUILayout.Button(EditorIcons.X.Active, GUILayout.Width(size), GUILayout.Height(size)))
+            var firstChild = Property.Children.First();
+            var firstChildType = firstChild.ValueEntry.TypeOfValue;
+
+            var isObject = typeof(Object).IsAssignableFrom(firstChildType);
+            var isArray = typeof(IEnumerable).IsAssignableFrom(firstChildType);
+            
+            var count = Property.Children.Count;
+            var subCount = Property.Children.First().Children.Count;
+
+            if (count > 1)
+            {
+                if (Property.Attributes.Contains(new InlinedAttribute())) DrawInlined(label);
+                else
                 {
-                    Property.BaseValueEntry.WeakSmartValue = null;
+                    foldout = SirenixEditorGUI.Foldout(foldout, label);
+                    if (SirenixEditorGUI.BeginFadeGroup(this, foldout))
+                    {
+                        GUIHelper.PushIndentLevel(1);
+                        for (var i = 0; i < Property.Children.Count; i++) Property.Children[i].Draw();
+                        GUIHelper.PopIndentLevel();
+                    }
+                    SirenixEditorGUI.EndFadeGroup();
+                }
+            }
+            else if (isObject) DrawInlined(label);
+            else if (isArray)
+            {
+                if (firstChild.ValueEntry.WeakSmartValue == null)
+                {
+                    firstChild.ValueEntry.WeakSmartValue = Activator.CreateInstance(firstChildType,0);
                 }
                 
+                EditorGUILayout.Space(1f);
+                EditorGUILayout.BeginHorizontal();
+
+                var size = EditorGUIUtility.singleLineHeight;
+                EditorGUILayout.LabelField(new GUIContent(icon), GUILayout.Width(size + 3f), GUILayout.Height(size));
+                
+                Property.Children.First().Draw(new GUIContent(label.text));
+
                 EditorGUILayout.EndHorizontal();
+                EditorGUILayout.Space(-1f);
             }
-            else if (subCount > 1)
+            else if (subCount <= 1)
             {
-                Debug.Log(1);
-
-                var rect = GUIHelper.GetCurrentLayoutRect();
-                SirenixEditorGUI.DrawSolidRect(rect, new Color(1, 0, 0, 0.1f));
-                
-                Property.Children.First().Draw(label);
-
-                /*var rect = Property.LastDrawnValueRect;
-                rect = new Rect(new Vector2(rect.x + GUIHelper.BetterLabelWidth, rect.y), Vector2.one * EditorGUIUtility.singleLineHeight);
-                
-                if (GUI.Button(rect, EditorIcons.X.Active))
+                var size = EditorGUIUtility.singleLineHeight;
+                if (firstChild.ValueEntry.TypeOfValue.GetCustomAttribute<InlinePropertyAttribute>() == null) SubDraw();
+                else
                 {
-                    Property.BaseValueEntry.WeakSmartValue = null;
-                }*/
+                    EditorGUILayout.Space(-2f);
+                    GUIHelper.PushLabelWidth(GUIHelper.BetterLabelWidth + 3f);
+                    
+                    SubDraw();
+                    
+                    GUIHelper.PopLabelWidth();
+                    EditorGUILayout.Space(5f);
+                    
+                }
+
+                void SubDraw()
+                {
+                    EditorGUILayout.BeginHorizontal();
+                    firstChild.Draw(label);
+
+                    if (GUILayout.Button(EditorIcons.X.Active, GUILayout.Width(size), GUILayout.Height(size)))
+                    {
+                        Property.BaseValueEntry.WeakSmartValue = null;
+                    }
+                    EditorGUILayout.EndHorizontal();
+                }
             }
             else
             {
-                Debug.Log(2);
-                
-                foldout = SirenixEditorGUI.Foldout(foldout, label);
-                if (SirenixEditorGUI.BeginFadeGroup(this, foldout))
+                var size = EditorGUIUtility.singleLineHeight;
+                if (rect != Rect.zero)
                 {
-                    GUIHelper.PushIndentLevel(1);
-                    for (var i = 0; i < Property.Children.Count; i++) Property.Children[i].Draw();
-                    GUIHelper.PopIndentLevel();
+                    rect = new Rect(new Vector2(rect.x + GUIHelper.BetterLabelWidth + 4f, rect.y), Vector2.one * size);
+                    if (GUI.Button(rect, EditorIcons.X.Active)) Property.BaseValueEntry.WeakSmartValue = null;
                 }
-                SirenixEditorGUI.EndFadeGroup();
+                if (!Property.Children.Any()) return;
+                
+                GUIHelper.PushLabelWidth(GUIHelper.BetterLabelWidth + 3f);
+                
+                Property.Children.First().Draw(label);
+                rect = Property.LastDrawnValueRect;
+                
+                GUIHelper.PopLabelWidth();
             }
+        }
+
+        private void DrawInlined(GUIContent label)
+        {
+            EditorGUILayout.BeginHorizontal();
+            
+            EditorGUILayout.LabelField(label, GUILayout.Width(GUIHelper.BetterLabelWidth));
+            for (var i = 0; i < Property.Children.Count; i++) Property.Children[i].Draw(GUIContent.none);
+            
+            var size = EditorGUIUtility.singleLineHeight;
+            if (GUILayout.Button(EditorIcons.X.Active, GUILayout.Width(size), GUILayout.Height(size)))
+            {
+                Property.BaseValueEntry.WeakSmartValue = null;
+            }
+            
+            EditorGUILayout.EndHorizontal();
         }
     }
 }

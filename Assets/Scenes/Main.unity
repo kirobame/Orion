@@ -121,6 +121,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &33054175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33054177}
+  - component: {fileID: 33054176}
+  m_Layer: 0
+  m_Name: Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &33054176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33054175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf559f26cfe64f3f95d6f4f6fc299095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  prefab: {fileID: 3386344535256321417, guid: 3bd4040f4f2244842aecb968146b2a0d, type: 3}
+--- !u!4 &33054177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33054175}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +277,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -296,6 +350,125 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd06e5766a6456449c00342744aafca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  token: {fileID: 11400000, guid: 77d4b7791ddbef446a7e77313f732c4a, type: 2}
+  value: {fileID: 963194227}
+  lifetimeLinkage: 0
+--- !u!1 &1042954395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1042954397}
+  - component: {fileID: 1042954396}
+  m_Layer: 0
+  m_Name: SomeListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1042954396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042954395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa8e02ac16a42f419e55f968696708b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: e9eeb86901c779b43b75036ef923e01c, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: remoteEvents
+      Entry: 7
+      Data: 0|Orion.RemoteEvent`1[[UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null]][], Assembly-CSharp-firstpass
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: callback
+      Entry: 7
+      Data: 1|Orion.OrionEvent`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
+        Assembly-CSharp-firstpass
+    - Name: persistentCalls
+      Entry: 7
+      Data: 2|Orion.PersistentCallBase[], Assembly-CSharp-firstpass
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|Orion.PersistentCall, Assembly-CSharp-firstpass
+    - Name: info
+      Entry: 1
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: target
+      Entry: 6
+      Data: 
+    - Name: method
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!4 &1042954397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042954395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1203236907
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +502,10 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 1203236908}
+    - {fileID: 11400000, guid: e8ec80e9bf60471489c9fca8abd643fd, type: 2}
+    - {fileID: 11400000, guid: 5c7c22f55055f164fb84b96f5de25473, type: 2}
+    - {fileID: 1203236907}
+    - {fileID: 33054176}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -343,11 +519,12 @@ MonoBehaviour:
       Data: 1|Orion.PersistentCallBase[], Assembly-CSharp-firstpass
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 2|Orion.PersistentCall`3[[SomeStruct, Assembly-CSharp],[System.Single,
-        mscorlib],[UnityEngine.GameObject, UnityEngine.CoreModule]], Assembly-CSharp-firstpass
+      Data: 2|Orion.PersistentCall`2[[Orion.IProxy`1[[UnityEngine.Light, UnityEngine.CoreModule]],
+        Assembly-CSharp-firstpass],[Orion.IProvider`1[[UnityEngine.Light, UnityEngine.CoreModule]],
+        Assembly-CSharp-firstpass]], Assembly-CSharp-firstpass
     - Name: info
       Entry: 1
       Data: 
@@ -356,24 +533,28 @@ MonoBehaviour:
       Data: 0
     - Name: method
       Entry: 1
-      Data: Log/SomeStruct, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null/System.Single,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089/UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      Data: Create/Orion.IProxy`1[[UnityEngine.Light, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null]], Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null/Orion.IProvider`1[[UnityEngine.Light,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - Name: linkage
       Entry: 6
       Data: 
     - Name: parameterOne
       Entry: 7
-      Data: 3|Orion.WrappedValue`1[[SomeStruct, Assembly-CSharp]], Assembly-CSharp-firstpass
+      Data: 3|Orion.WrappedValue`1[[Orion.IProxy`1[[UnityEngine.Light, UnityEngine.CoreModule]],
+        Assembly-CSharp-firstpass]], Assembly-CSharp-firstpass
     - Name: value
       Entry: 7
-      Data: SomeStruct, Assembly-CSharp
-    - Name: number
-      Entry: 4
-      Data: 0
-    - Name: text
-      Entry: 6
-      Data: 
+      Data: 4|Orion.DynamicTokenProxy`1[[UnityEngine.Light, UnityEngine.CoreModule]],
+        Assembly-CSharp-firstpass
+    - Name: token
+      Entry: 10
+      Data: 1
+    - Name: owner
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -381,10 +562,47 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: parameterTwo
+      Entry: 7
+      Data: 5|Orion.WrappedValue`1[[Orion.IProvider`1[[UnityEngine.Light, UnityEngine.CoreModule]],
+        Assembly-CSharp-firstpass]], Assembly-CSharp-firstpass
+    - Name: value
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|Orion.PersistentCall`1[[UnityEngine.Light, UnityEngine.CoreModule]],
+        Assembly-CSharp-firstpass
+    - Name: info
+      Entry: 1
+      Data: 
+    - Name: target
+      Entry: 10
+      Data: 0
+    - Name: method
+      Entry: 1
+      Data: Log/UnityEngine.Light, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    - Name: linkage
       Entry: 6
       Data: 
-    - Name: parameterThree
-      Entry: 6
+    - Name: parameterOne
+      Entry: 7
+      Data: 7|Orion.DynamicTokenProxy`1[[UnityEngine.Light, UnityEngine.CoreModule]],
+        Assembly-CSharp-firstpass
+    - Name: token
+      Entry: 10
+      Data: 1
+    - Name: owner
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
