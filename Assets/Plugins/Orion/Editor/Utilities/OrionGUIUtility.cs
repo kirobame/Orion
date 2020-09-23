@@ -28,34 +28,64 @@ namespace Orion.Editor
         private static Texture GetTypeIcon(Type type, int resolution)
         {
             if (type == typeof(Enum)) return Resources.Load<Texture>($"Icons/Types/enum@{resolution}x");
-            else if (type.Namespace != null && type.Namespace.Contains("Orion"))
+            
+            if (type.Namespace != null && type.Namespace.Contains("Orion"))
             {
                 var guids = AssetDatabase.FindAssets(type.Name, new string[] {"Assets/Plugins/Orion/Core"});
-                var meta = File.ReadAllLines($"{AssetDatabase.GUIDToAssetPath(guids.First())}.meta");
-
-                var startIndex =  meta[7].IndexOf("guid: ", StringComparison.Ordinal) + 6;
-                var endIndex =  meta[7].IndexOf(',', startIndex);
-                
-                var iconPath = AssetDatabase.GUIDToAssetPath(meta[7].Substring(startIndex, endIndex - startIndex));
-                return AssetDatabase.LoadAssetAtPath<Texture>(iconPath);
-            } 
-            else if (type == typeof(Object)) return Resources.Load<Texture>($"Icons/Types/object@{resolution}x");
-            else if (typeof(Object).IsAssignableFrom(type)) return EditorGUIUtility.ObjectContent(null, type).image;
-            else if (IsPrimitive(type)) return Resources.Load<Texture>($"Icons/Types/{type.GetNiceName()}@{resolution}x");
-            else
-            {
-                var texture = Resources.Load<Texture>($"Icons/Types/{type.GetNiceFullName()}@{resolution}x");
-                if (texture == null)
+                if (guids.Any())
                 {
-                    if (type.IsClass) return Resources.Load<Texture>($"Icons/Language/VisualStudioColor/Class@{resolution}x");
-                    else if (type.IsValueType) return Resources.Load<Texture>($"Icons/Language/VisualStudioColor/Struct@{resolution}x");
-                    else if (type.IsInterface) return Resources.Load<Texture>($"Icons/Language/VisualStudioColor/Interface@{resolution}x");
+                    var meta = File.ReadAllLines($"{AssetDatabase.GUIDToAssetPath(guids.First())}.meta");
+
+                    if (meta[7] != "  icon: {instanceID: 0}")
+                    {
+                        var startIndex =  meta[7].IndexOf("guid: ", StringComparison.Ordinal) + 6;
+                        var endIndex =  meta[7].IndexOf(',', startIndex);
+                
+                        var iconPath = AssetDatabase.GUIDToAssetPath(meta[7].Substring(startIndex, endIndex - startIndex));
+                        return AssetDatabase.LoadAssetAtPath<Texture>(iconPath);
+                    }
+                }
+            } 
+            
+            if (type == typeof(Object)) return Resources.Load<Texture>($"Icons/Types/object@{resolution}x");
+            if (typeof(Object).IsAssignableFrom(type)) return EditorGUIUtility.ObjectContent(null, type).image;
+            if (IsPrimitive(type)) return Resources.Load<Texture>($"Icons/Types/{type.GetNiceName()}@{resolution}x");
+            
+            var texture = Resources.Load<Texture>($"Icons/Types/{type.GetNiceFullName()}@{resolution}x");
+            if (texture == null)
+            {
+                if (type.IsArray)
+                {
+                    var elementType = type.GetElementType();
+                    texture = Resources.Load<Texture>($"Icons/Types/System.Collections.Generic.IEnumerable_{elementType.GetNiceName()}@{resolution}x");
+ 
+                    if (texture == null) texture = Resources.Load<Texture>($"Icons/Types/System.Collections.IEnumerable@{resolution}x");
+                        
+                    return texture;
+                }
+                    
+                var interfaces = type.GetInterfaces();
+                foreach (var interfaceType in interfaces)
+                {
+                    if (typeof(IEnumerable).IsAssignableFrom(interfaceType))
+                    {
+                        if (interfaceType.IsGenericType)
+                        {
+                            var argumentType = interfaceType.GetGenericArguments().First();
+                            texture = Resources.Load<Texture>($"Icons/Types/System.Collections.Generic.IEnumerable_{argumentType.GetNiceName()}@{resolution}x");
+                        }
+                        else texture = Resources.Load<Texture>($"Icons/Types/System.Collections.IEnumerable@{resolution}x");
+
+                        return texture;
+                    }
                 }
 
-                return texture;
+                if (type.IsClass) return Resources.Load<Texture>($"Icons/Language/VisualStudioColor/Class@{resolution}x");
+                if (type.IsValueType) return Resources.Load<Texture>($"Icons/Language/VisualStudioColor/Struct@{resolution}x");
+                if (type.IsInterface) return Resources.Load<Texture>($"Icons/Language/VisualStudioColor/Interface@{resolution}x");
             }
-            
-            return null;
+
+            return texture;
         }
 
         public static Type GetProxyType(this InspectorProperty property)

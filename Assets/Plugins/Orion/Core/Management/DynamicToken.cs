@@ -39,18 +39,13 @@ namespace Orion
             value = default;
             return false;
         }
-
-        public void Set<T>(Object owner, T value) => registry[owner.GetInstanceID()] = value;
-        public bool TrySet<T>(Object owner, T value)
+        
+        public void Set<T>(Object owner, T value)
         {
             var id = owner.GetInstanceID();
-            if (registry.ContainsKey(id))
-            {
-                registry[id] = value;
-                return true;
-            }
-
-            return false;
+            
+            if (registry.ContainsKey(id)) registry[id] = value;
+            else Register(owner, value);
         }
     }
 }

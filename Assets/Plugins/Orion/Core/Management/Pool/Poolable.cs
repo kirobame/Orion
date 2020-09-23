@@ -1,14 +1,18 @@
-﻿using Sirenix.OdinInspector;
+﻿using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace Orion
 {
-    public abstract class Poolable : SerializedMonoBehaviour
+    public abstract class Poolable<T> : SerializedMonoBehaviour, IProxy<T>
     {
-        //[FoldoutGroup("Events")] public OrionEvent onReboot = new OrionEvent();
-    
-        private Pool origin;
+        [FoldoutGroup("Events")] public OrionEvent onReboot = new OrionEvent();
+
+        public T Value => value;
+        [SerializeField] private T value;
+         
+        private Pool<T> origin;
         
         protected virtual void OnDisable()
         {
@@ -16,13 +20,24 @@ namespace Orion
             origin = null;
         }
 
-        public void SetOrigin(Pool origin) => this.origin = origin;
+        public void SetOrigin(Pool<T> origin)
+        {
+            Debug.Log(origin);
+            this.origin = origin;
+        }
 
         public void Reboot()
         {
-            //onReboot.Invoke();
+            onReboot.Invoke();
             OnReboot();
         }
-        public abstract void OnReboot();
+        public virtual void OnReboot() { }
+        
+        object IReadable.Read() => Read();
+        public T Read() => value;
+        
+        void IWritable.Write(object value) => Write((T)value);
+        public void Write(T value) => this.value = value;
+
     }
 }

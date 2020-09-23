@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Orion
 {
@@ -23,7 +24,7 @@ namespace Orion
         {
             try
             {
-                objects.Add(referencer.Token, referencer);
+                referencers.Add(referencer.Token, referencer);
             }
             catch (Exception exception)
             {
@@ -98,7 +99,10 @@ namespace Orion
         {
             try
             {
-                return stacks[token].Remove(value);
+                var removalSuccess = stacks[token].Remove(value);
+                if (removalSuccess && stacks[token].Count == 0) stacks.Remove(token);
+
+                return removalSuccess;
             }
             catch (Exception exception)
             {
@@ -140,11 +144,17 @@ namespace Orion
             }
         }
 
-        public static void Set<T>(Token token, T value) => objects[token] = value;
+        public static void Set<T>(Token token, T value)
+        {
+            objects[token] = value;
+            if (referencers.TryGetValue(token, out var referencer)) referencer.SetValue(value as Object);
+        }
         public static bool TrySet<T>(Token token, T value)
         {
             if (objects.ContainsKey(token))
             {
+                if (referencers.TryGetValue(token, out var referencer)) referencer.SetValue(value as Object);
+                
                 objects[token] = value;
                 return true;
             }
