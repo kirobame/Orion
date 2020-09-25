@@ -1280,6 +1280,13 @@
                 </e>
                 <e p="VoidListener.cs" t="Include" />
               </e>
+              <e p="Feedback" t="Include">
+                <e p="Feedback.cs" t="Include" />
+                <e p="FeedbackPlayer.cs" t="Include" />
+                <e p="LoopEffect.cs" t="Include" />
+                <e p="PauseEffect.cs" t="Include" />
+                <e p="SoundEffect.cs" t="Include" />
+              </e>
               <e p="Management" t="Include">
                 <e p="DynamicToken.cs" t="Include" />
                 <e p="Pool" t="Include">
@@ -1386,6 +1393,7 @@
           <e p="ISomeInterface.cs" t="Include" />
           <e p="LightHandler.cs" t="Include" />
           <e p="LightPool.cs" t="Include" />
+          <e p="OtherBehaviour.cs" t="Include" />
           <e p="Procedural" t="Include">
             <e p="Vector2" t="Include">
               <e p="ExtendedRemoteVector2.cs" t="Include" />
