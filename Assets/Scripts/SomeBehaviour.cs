@@ -15,5 +15,18 @@ public class SomeBehaviour : SerializedMonoBehaviour
     public OrionEvent someEvent = new OrionEvent();
 
     [Button]
-    private void Invoke() => someEvent.Invoke();
+    private void Invoke()
+    {
+        someEvent.Invoke();
+    }
+
+    public void SomeMethod(float number, string text)
+    {
+        
+    }
+    
+    public void OtherMethod(float number)
+    {
+        
+    }
 }

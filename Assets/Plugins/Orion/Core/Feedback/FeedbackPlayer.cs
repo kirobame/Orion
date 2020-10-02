@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -6,11 +8,22 @@ namespace Orion
 {
     public class FeedbackPlayer : SerializedMonoBehaviour
     {
-        [SerializeField] private Feedback[] feedbacks = new Feedback[0];
+        #if UNITY_EDITOR
+
+        private void RemoveFeedback(Feedback feedback)
+        {
+            feedbacks.Remove(feedback);
+            DestroyImmediate(feedback);
+        }
+        
+        #endif
+        
+        [ListDrawerSettings(HideAddButton = true, CustomRemoveElementFunction = "RemoveFeedback")]
+        [SerializeField] private List<Feedback> feedbacks = new List<Feedback>();
 
         private Coroutine routine;
         private int currentIndex = -1;
-
+        
         [Button]
         public void Play()
         {
@@ -22,9 +35,8 @@ namespace Orion
             foreach (var item in feedbacks) item.Prepare();
             
             var feedback = feedbacks.First();
-            Debug.Log($"Beginning with : {feedback}");
-            
             feedback.onCompletion += PlayNext;
+            
             routine = StartCoroutine(feedback.GetRoutine());
         }
         public void Stop()
@@ -37,17 +49,13 @@ namespace Orion
 
         private void PlayNext()
         {
-            Debug.Log($"Ending : {feedbacks[currentIndex]}");
-            
             feedbacks[currentIndex].onCompletion -= PlayNext;
             if (!feedbacks[currentIndex].GetNextIndex(currentIndex, feedbacks, out currentIndex))
             {
                 Stop();
                 return;
             }
-            
-            Debug.Log($"Playing : {feedbacks[currentIndex]}");
-            
+
             feedbacks[currentIndex].onCompletion += PlayNext;
             routine = StartCoroutine(feedbacks[currentIndex].GetRoutine());
         }

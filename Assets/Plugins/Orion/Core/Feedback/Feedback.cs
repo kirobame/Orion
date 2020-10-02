@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Win32;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Orion
 {
-    public abstract class Feedback
+    public abstract class Feedback : SerializedMonoBehaviour
     {
         public event Action onCompletion;
 
@@ -16,7 +17,6 @@ namespace Orion
         public virtual bool GetNextIndex(int currentIndex, IReadOnlyList<Feedback> registry, out int nextIndex)
         {
             nextIndex = currentIndex + 1;
-            Debug.Log(nextIndex + " / " + registry.Count);
             return nextIndex < registry.Count;
         }
 

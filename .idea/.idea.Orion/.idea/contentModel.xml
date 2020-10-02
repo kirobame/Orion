@@ -1336,6 +1336,8 @@
             </e>
             <e p="Editor" t="Include">
               <e p="Drawers" t="Include">
+                <e p="FeedbackDrawer.cs" t="Include" />
+                <e p="FeedbackPlayerEditor.cs" t="Include" />
                 <e p="MethodSelectorAttributeDrawer.cs" t="Include" />
                 <e p="OrionEventDrawer.cs" t="Include" />
                 <e p="PersistentCallDrawer.cs" t="Include" />
@@ -1405,6 +1407,7 @@
           </e>
           <e p="SomeBehaviour.cs" t="Include" />
           <e p="SomeClass.cs" t="Include" />
+          <e p="SomeComponent.cs" t="Include" />
           <e p="SomeRelay.cs" t="Include" />
           <e p="SomeStruct.cs" t="Include" />
         </e>
