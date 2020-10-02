@@ -6,7 +6,7 @@ namespace Orion
     [HideReferenceObjectPicker, InlineProperty]
     public class TokenProxy<T> : IProxy<T>
     {
-        [SerializeField, HideLabel] private Token token;
+        [SerializeField] private Token token;
         
         object IReadable.Read() => Read();
         public T Read() => (T)Repository.Objects[token];

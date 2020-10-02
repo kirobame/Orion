@@ -13,6 +13,21 @@ namespace Orion.Editor
 {
     public static class OrionGUIUtility 
     {
+        public static IEnumerable<Type> GetDependencies(this Type root)
+        {
+            var dependencies = new List<Type>();
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                foreach (var type in assembly.GetTypes())
+                {
+                    if (!root.IsAssignableFrom(type) || type.IsAbstract) continue;
+                    dependencies.Add(type);
+                }
+            }
+
+            return dependencies;
+        }
+        
         private static bool IsPrimitive(Type type)
         {
             if (type.IsPrimitive) return true;

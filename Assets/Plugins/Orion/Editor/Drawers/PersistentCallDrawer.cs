@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Ludiq.PeekCore;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities;
 using Sirenix.Utilities.Editor;
@@ -17,12 +18,19 @@ namespace Orion.Editor
         private Object previousTarget;
         
         private Type[] argTypes;
-        private bool parameterFoldout;
+        private LocalPersistentContext<bool> parameterFoldout;
+        
+        private List<Object> hierarchy = new List<Object>();
+        private int hierarchyIndex;
         
         protected override void Initialize()
         {
             base.Initialize();
-            OnTargetChanged(Property.Children[0].ValueEntry.WeakSmartValue as Object);
+
+            var target = Property.Children[0].ValueEntry.WeakSmartValue as Object;
+            OnTargetChanged(target);
+            
+            if (target != null && target.IsComponentHolder()) BuildHierarchy(target);
 
             var persistentCall = (Property.ValueEntry.WeakSmartValue as PersistentCallBase);
             if (persistentCall.Info == string.Empty) return;
@@ -30,6 +38,8 @@ namespace Orion.Editor
             var splittedInfo = persistentCall.Info.Split('/');
             argTypes = new Type[splittedInfo.Length];
             for (var i = 0; i < splittedInfo.Length; i++) argTypes[i] = Type.GetType(splittedInfo[i]);
+            
+            Property.Context.GetPersistent(this, $"{((Object)Property.SerializationRoot.ValueEntry.WeakSmartValue).name}-PersistentCall-Foldout",out parameterFoldout);
         }
 
         protected override void DrawPropertyLayout(GUIContent label)
@@ -39,8 +49,29 @@ namespace Orion.Editor
             
             DrawHeader(current);
             DrawParameters(persistentCall, current);
+            
+            var target = Property.Children[0].ValueEntry.WeakSmartValue as Object;
+            if (target != null) BuildHierarchy(target);
         }
 
+        private void BuildHierarchy(Object target)
+        {
+            if (target.IsComponentHolder())
+            {
+                hierarchy = new List<Object>(target.GetComponents<Component>());
+            
+                var owner = target.GameObject();
+                if (owner != null) hierarchy.Insert(0, owner);
+                
+                hierarchyIndex = hierarchy.IndexOf(target);
+            }
+            else
+            {
+                hierarchy.Clear();
+                hierarchyIndex = 0;
+            }
+        }
+        
         #region Drawing
 
         private void DrawHeader(MethodInfo current)
@@ -49,11 +80,12 @@ namespace Orion.Editor
             
             var targetProperty = Property.Children[0];
             var target = targetProperty.ValueEntry.WeakSmartValue as Object;
-            
-            targetProperty.Draw();
+
+            target = EditorGUILayout.ObjectField(GUIContent.none, target, typeof(Object), true, GUILayout.Width(GUIHelper.BetterLabelWidth));
+            targetProperty.ValueEntry.WeakSmartValue = target;
             
             string name;
-            if (target == null) name = "None";
+            if (target == null)  name = "None";
             else
             {
                 if (current == null) name = "None";
@@ -61,18 +93,42 @@ namespace Orion.Editor
                 else name = current.Name;
             }
             
-            if (GUILayout.Button(name, EditorStyles.popup, GUILayout.Width(EditorGUIUtility.currentViewWidth - GUIHelper.BetterLabelWidth - 70f)) && target != null)
+            if (target != previousTarget)
             {
-                var lastRect = targetProperty.LastDrawnValueRect;
-                var position = new Vector2(lastRect.xMax + 3f, lastRect.yMax - 2f);
+                BuildHierarchy(target);
+                OnTargetChanged(target);
+            }
+            previousTarget = target;
+
+            var width = GUIHelper.BetterLabelWidth;
+            var size = EditorGUIUtility.singleLineHeight;
+            
+            if (hierarchy.Count > 0)
+            {
+                var names = new GUIContent[hierarchy.Count];
+                for (var i = 0; i < names.Length; i++) names[i] = new GUIContent($"{i} - {hierarchy[i].GetType().GetNiceName()}");
+            
+                var selection = EditorGUILayout.Popup(GUIContent.none, hierarchyIndex, names, GUILayout.Width(size + 10f), GUILayout.Height(size));
+                if (selection != hierarchyIndex)
+                {
+                    target = hierarchy[selection];
+                    targetProperty.ValueEntry.WeakSmartValue = target;
+
+                    hierarchyIndex = selection;
+                }
+
+                width += size + 13f;
+            }
+
+            if (GUILayout.Button(name, EditorStyles.popup) && target != null)
+            {
+                var lastRect = GUIHelper.GetCurrentLayoutRect();;
+                var position = new Vector2(lastRect.x + width + 3f, lastRect.yMax - 3f);
                 
-                var window = dropdown.ShowInPopup(position, EditorGUIUtility.currentViewWidth - GUIHelper.BetterLabelWidth - 69f);
+                var window = dropdown.ShowInPopup(position, lastRect.width - width - 2f);
                 window.OnClose += dropdown.SelectionTree.Selection.ConfirmSelection; 
             }
-            
-            if (target != previousTarget) OnTargetChanged(target);
-            previousTarget = target;
-            
+
             EditorGUILayout.EndHorizontal();
         }
         
@@ -80,8 +136,8 @@ namespace Orion.Editor
         {
             if (Property.Children.Count <= 2 || current == null) return;
 
-            parameterFoldout = EditorGUILayout.Foldout(parameterFoldout, new GUIContent("Parameters"));
-            if (SirenixEditorGUI.BeginFadeGroup(this, parameterFoldout))
+            parameterFoldout.Value = EditorGUILayout.Foldout(parameterFoldout.Value, new GUIContent("Parameters"));
+            if (SirenixEditorGUI.BeginFadeGroup(this, parameterFoldout.Value))
             { 
                 var linkage = ((ILinkage)persistentCall).Linkage;
                 var parameters = current.GetParameters();
@@ -143,7 +199,7 @@ namespace Orion.Editor
                         Property.Children[2 + x].Draw(new GUIContent(ObjectNames.NicifyVariableName(parameters[x].Name)));
                     }
                 }
-            }//
+            }
             SirenixEditorGUI.EndFadeGroup();
         }
         #endregion

@@ -25,6 +25,7 @@
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Proxies/RemoteValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Managment/IReferencer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Core/Proxies/ExtendedRemoteValue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/ProxyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/DynamicToken.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Resources/Zip/Editor/Drawer/PersistentCallDrawer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -41,11 +42,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/StackReferencer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/ReferenceProxy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/TokenProxy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/WrappedValue.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InlineProxyAttribute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InlinedAttribute.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/InlinedAttribute.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/MemberSelectorAttributeDrawer.cs" />
@@ -56,7 +52,6 @@
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Attributes/PropertySelectorAttribute.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/PropertySelectorAttributeDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Objects/ValueHolder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/PersistentCallDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Generics/WrappedValue.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/HideLabelProcessor.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/ProxyAttributeProcessor.cs" />
@@ -67,7 +62,6 @@
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/OrionEventDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Runtime/PersistentCall.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Tokens/DynamicTokenProxy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/OrionGUIUtility.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/DynamicToken.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Referencer/ReferencerBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Repository.cs" />
@@ -84,14 +78,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LightPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/ProxyCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Listener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OtherBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/ProxyDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/SoundEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/PauseEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/LoopEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/SomeComponentDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/SomeComponentDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/OrionGUIUtility.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Feedback.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/PersistentCallDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Tokens/TokenProxy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/ProxyDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/FeedbackPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackPlayerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -147,6 +148,9 @@
       <workItem from="1600863904255" duration="7689000" />
       <workItem from="1600936258797" duration="594000" />
       <workItem from="1601019117556" duration="7889000" />
+      <workItem from="1601628280779" duration="9424000" />
+      <workItem from="1601644394136" duration="6035000" />
+      <workItem from="1601650681819" duration="1529000" />
     </task>
     <servers />
   </component>

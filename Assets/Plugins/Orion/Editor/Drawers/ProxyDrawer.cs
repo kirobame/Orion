@@ -26,8 +26,9 @@ namespace Orion.Editor
         };
 
         private bool canDraw = true;
+        private Type previousType;
         
-        private bool foldout;
+        private LocalPersistentContext<bool> foldout;
         private Texture icon;
         
         private Rect rect = Rect.zero;
@@ -37,6 +38,32 @@ namespace Orion.Editor
         protected override void Initialize()
         {
             base.Initialize();
+            Setup();
+            
+            Property.Context.GetPersistent(this, $"{((Object)Property.SerializationRoot.ValueEntry.WeakSmartValue).name}-Proxy-Foldout",out foldout);
+        }
+
+        protected override void DrawPropertyLayout(GUIContent label)
+        {
+            if (!canDraw)
+            {
+                CallNextDrawer(label);
+                return;
+            }
+
+            var type = Property.Children.First().ValueEntry.TypeOfValue;
+            if (type != previousType) Setup();
+            else previousType = type;
+            
+            var text = label.text.Trim();
+            label = new GUIContent("  " + text, icon);
+            var childProperty = Property.Children.FirstOrDefault();
+            
+            draw(label, childProperty);
+        }
+
+        private void Setup()
+        {
             if (Property.BaseValueEntry.WeakSmartValue == null || !Property.BaseValueEntry.BaseValueType.IsInterface)
             {
                 canDraw = false;
@@ -56,34 +83,21 @@ namespace Orion.Editor
             var isDirectlyInlined = inlinedTypes.Any(type => type.IsAssignableFrom(typeof(TElement)));
 
             if (isDirectlyInlined) draw = DrawDirectlyInlined;
-            else if (isObject || isIndirectlyInlined) draw = DrawIndirectlyInlined;
+            else if (isObject || isIndirectlyInlined)    draw = DrawIndirectlyInlined;
             else if (count > 1) draw = DrawAsIndirectFoldout;
             else if (isCollection) draw = DrawAsCollection;
-            else if (subCount <= 1) draw = DrawDirectlyInlined;
+            else if (subCount <= 1)draw = DrawDirectlyInlined;
             else draw = DrawAsDirectFoldout;
-        }
 
-        protected override void DrawPropertyLayout(GUIContent label)
-        {
-            if (!canDraw)
-            {
-                CallNextDrawer(label);
-                return;
-            }
-            
-            var text = label.text.Trim();
-            label = new GUIContent("  " + text, icon);
-            var childProperty = Property.Children.FirstOrDefault();
-            
-            draw(label, childProperty);
+            previousType = childProperty.ValueEntry.TypeOfValue;
         }
-
+        
         #region Drawing Methods
         
         private void DrawDirectlyInlined(GUIContent label, InspectorProperty property)
         {
             var size = EditorGUIUtility.singleLineHeight;
-            if (property.ValueEntry.TypeOfValue.GetCustomAttribute<InlinePropertyAttribute>() == null) SubDraw();
+            if (property.ValueEntry.TypeOfValue.GetCustomAttribute<InlinePropertyAttribute>() == null)SubDraw();
             else
             {
                 EditorGUILayout.Space(-2f);
@@ -93,7 +107,6 @@ namespace Orion.Editor
                     
                 GUIHelper.PopLabelWidth();
                 EditorGUILayout.Space(5f);
-                    
             }
 
             void SubDraw()
@@ -113,7 +126,6 @@ namespace Orion.Editor
         {
             EditorGUILayout.BeginHorizontal();
             
-       
             EditorGUILayout.LabelField(label, GUILayout.Width(GUIHelper.BetterLabelWidth - GUIHelper.CurrentIndentAmount));
             for (var i = 0; i < Property.Children.Count; i++) Property.Children[i].Draw(GUIContent.none);
             
@@ -148,8 +160,8 @@ namespace Orion.Editor
 
         private void DrawAsIndirectFoldout(GUIContent label, InspectorProperty property)
         {
-            foldout = SirenixEditorGUI.Foldout(foldout, label);
-            if (SirenixEditorGUI.BeginFadeGroup(this, foldout))
+            foldout.Value = SirenixEditorGUI.Foldout(foldout.Value, label);
+            if (SirenixEditorGUI.BeginFadeGroup(this, foldout.Value))
             {
                 GUIHelper.PushIndentLevel(1);
                 for (var i = 0; i < Property.Children.Count; i++) Property.Children[i].Draw();

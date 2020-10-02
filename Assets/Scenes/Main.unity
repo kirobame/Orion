@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33054177}
   - component: {fileID: 33054176}
+  - component: {fileID: 33054178}
   m_Layer: 0
   m_Name: Pool
   m_TagString: Untagged
@@ -174,6 +175,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &33054178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33054175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632824f5b65741389ca76b0ffc622a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: someEvent
+      Entry: 7
+      Data: 0|Orion.OrionEvent, Assembly-CSharp-firstpass
+    - Name: persistentCalls
+      Entry: 7
+      Data: 1|Orion.PersistentCallBase[], Assembly-CSharp-firstpass
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,9 +577,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1203236909}
-  - component: {fileID: 1203236908}
   - component: {fileID: 1203236911}
   - component: {fileID: 1203236910}
+  - component: {fileID: 1203236908}
   m_Layer: 0
   m_Name: SomeObject
   m_TagString: Untagged
@@ -549,82 +589,27 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &1203236908
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203236907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 632824f5b65741389ca76b0ffc622a3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 665d4f71b7b849a4b9cf5c1ea47a7906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: e9eeb86901c779b43b75036ef923e01c, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: someEvent
-      Entry: 7
-      Data: 0|Orion.OrionEvent, Assembly-CSharp-firstpass
-    - Name: persistentCalls
-      Entry: 7
-      Data: 1|Orion.PersistentCallBase[], Assembly-CSharp-firstpass
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 2|Orion.PersistentCall`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
-        Assembly-CSharp-firstpass
-    - Name: info
-      Entry: 1
-      Data: 
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: method
-      Entry: 1
-      Data: Invoke/UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    - Name: linkage
+    - Name: durationProxy
       Entry: 6
-      Data: 
-    - Name: parameterOne
-      Entry: 7
-      Data: 3|Orion.WrappedValue`1[[UnityEngine.Vector2, UnityEngine.CoreModule]],
-        Assembly-CSharp-firstpass
-    - Name: value
-      Entry: 7
-      Data: UnityEngine.Vector2, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 5
-    - Name: 
-      Entry: 4
-      Data: 10
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
       Data: 
 --- !u!4 &1203236909
 Transform:
@@ -640,102 +625,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1203236910
-AudioSource:
-  m_ObjectHideFlags: 0
+--- !u!114 &1203236910
+MonoBehaviour:
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203236907}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2591885b834b0186850e5979bc8409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  repetitions: 0
+  range: 0
 --- !u!114 &1203236911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,69 +663,12 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1203236910}
-    - {fileID: 8300000, guid: cb672d345f2352c46810b060d889b986, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: feedbacks
-      Entry: 7
-      Data: 0|Orion.Feedback[], Assembly-CSharp-firstpass
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 1|Orion.SoundEffect, Assembly-CSharp-firstpass
-    - Name: audioProxy
-      Entry: 7
-      Data: 2|Orion.WrappedValue`1[[UnityEngine.AudioSource, UnityEngine.AudioModule]],
-        Assembly-CSharp-firstpass
-    - Name: value
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: clip
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|Orion.PauseEffect, Assembly-CSharp-firstpass
-    - Name: durationProxy
-      Entry: 7
-      Data: 4|Orion.WrappedValue`1[[System.Single, mscorlib]], Assembly-CSharp-firstpass
-    - Name: value
-      Entry: 4
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 5|Orion.LoopEffect, Assembly-CSharp-firstpass
-    - Name: repetitions
-      Entry: 3
-      Data: 3
-    - Name: range
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
+  feedbacks:
+  - {fileID: 1203236910}
+  - {fileID: 1203236908}
