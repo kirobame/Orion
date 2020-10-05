@@ -1262,6 +1262,10 @@
           </e>
           <e p="Orion" t="Include">
             <e p="Core" t="Include">
+              <e p="Animation" t="Include">
+                <e p="AnimationProxy.cs" t="Include" />
+                <e p="AnimatorProxy.cs" t="Include" />
+              </e>
               <e p="Attributes" t="Include">
                 <e p="InlinedAttribute.cs" t="Include" />
                 <e p="MethodSelectorAttribute.cs" t="Include" />
@@ -1313,6 +1317,7 @@
                 <e p="Effects" t="Include">
                   <e p="LoopEffect.cs" t="Include" />
                   <e p="PauseEffect.cs" t="Include" />
+                  <e p="PooledSoundEffect.cs" t="Include" />
                   <e p="SoundEffect.cs" t="Include" />
                 </e>
                 <e p="Feedback.cs" t="Include" />
