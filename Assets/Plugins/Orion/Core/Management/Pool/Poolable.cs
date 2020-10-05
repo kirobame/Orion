@@ -20,11 +20,7 @@ namespace Orion
             origin = null;
         }
 
-        public void SetOrigin(Pool<T> origin)
-        {
-            Debug.Log(origin);
-            this.origin = origin;
-        }
+        public void SetOrigin(Pool<T> origin) => this.origin = origin;
 
         public void Reboot()
         {

@@ -18,7 +18,7 @@ namespace Orion
     
         private List<IEnumerator> chain = new List<IEnumerator>();
     
-        public abstract IEnumerator GetCall();
+        protected abstract IEnumerator GetCall();
 
         public void Append(Routine routine) => chain.Add(routine.GetCall());
         public void Append(IEnumerator routine) => chain.Add(routine);

@@ -13,31 +13,6 @@ namespace Orion.Editor
 {
     public static class OrionGUIUtility 
     {
-        public static IEnumerable<Type> GetDependencies(this Type root)
-        {
-            var dependencies = new List<Type>();
-            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
-            {
-                foreach (var type in assembly.GetTypes())
-                {
-                    if (!root.IsAssignableFrom(type) || type.IsAbstract) continue;
-                    dependencies.Add(type);
-                }
-            }
-
-            return dependencies;
-        }
-        
-        private static bool IsPrimitive(Type type)
-        {
-            if (type.IsPrimitive) return true;
-            else if (type == typeof(string)) return true;
-            else if (type == typeof(object)) return true;
-            else if (type.BaseType == typeof(Enum)) return true;
-            
-            return false;
-        }
-
         public static Texture GetSmallIcon(this Type type) => GetTypeIcon(type, 16);
         public static Texture GetIcon(this Type type) => GetTypeIcon(type, 32);
         private static Texture GetTypeIcon(Type type, int resolution)
@@ -64,7 +39,7 @@ namespace Orion.Editor
             
             if (type == typeof(Object)) return Resources.Load<Texture>($"Icons/Types/object@{resolution}x");
             if (typeof(Object).IsAssignableFrom(type)) return EditorGUIUtility.ObjectContent(null, type).image;
-            if (IsPrimitive(type)) return Resources.Load<Texture>($"Icons/Types/{type.GetNiceName()}@{resolution}x");
+            if (type.IsExtendedPrimitive()) return Resources.Load<Texture>($"Icons/Types/{type.GetNiceName()}@{resolution}x");
             
             var texture = Resources.Load<Texture>($"Icons/Types/{type.GetNiceFullName()}@{resolution}x");
             if (texture == null)

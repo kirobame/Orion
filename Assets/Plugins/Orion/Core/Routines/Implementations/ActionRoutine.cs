@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using UnityEngine;
 
 namespace Orion
 {
@@ -7,7 +8,7 @@ namespace Orion
     {
         public Action action;
     
-        public override IEnumerator GetCall()
+        protected override IEnumerator GetCall()
         {
             action();
             yield break;

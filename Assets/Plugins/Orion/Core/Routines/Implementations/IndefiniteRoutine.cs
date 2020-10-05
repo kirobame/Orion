@@ -8,7 +8,7 @@ namespace Orion
         public Action action;
         public object waitInstruction;
 
-        public override IEnumerator GetCall()
+        protected override IEnumerator GetCall()
         {
             while (true)
             {

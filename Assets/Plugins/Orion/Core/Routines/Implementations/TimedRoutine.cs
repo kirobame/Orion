@@ -11,7 +11,7 @@ namespace Orion
         public Action<float> during;
         public Func<float> incrementTime;
 
-        public override IEnumerator GetCall()
+        protected override IEnumerator GetCall()
         {
             var time = 0f;
             while (time < duration)
