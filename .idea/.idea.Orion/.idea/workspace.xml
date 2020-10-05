@@ -24,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/SoundPreset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Bundles/StandardAudioBundle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/OutputPreset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/SoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/ProxyCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Bundles/AudioBundle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Routine.cs" root0="FORCE_HIGHLIGHTING" />
@@ -36,9 +37,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/ActionRoutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/InstructionRoutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/TimedRoutine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimatorProxy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Repository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/AudioPoolable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/DynamicToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimationProxy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Runtime/OrionEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Poolable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,7 +52,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Objects/ValueHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/LowpassFilter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/DistortionFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/SoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/PooledSoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/HighpassFilter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/ChorusFilter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/EchoFilter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -57,10 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Generics/AssetProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/IProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SomeStruct.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/PoolableWrapper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LightHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LightPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/ProxyCreator.cs" />
@@ -78,7 +77,6 @@
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/FeedbackPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackPlayerEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackDrawer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/AudioBundle.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Extensions/SystemExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/OrionGUIUtility.cs" />
@@ -108,6 +106,11 @@
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/ReverbFilter.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Bundles/AudioBundle.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/AudioFilterTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/PooledSoundEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimatorValue.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimatorProxy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimationProxy.cs" />
       </list>
     </option>
   </component>
@@ -178,6 +181,7 @@
       <workItem from="1601644394136" duration="6035000" />
       <workItem from="1601650681819" duration="1529000" />
       <workItem from="1601811712287" duration="7228000" />
+      <workItem from="1601916825487" duration="3213000" />
     </task>
     <servers />
   </component>
@@ -191,7 +195,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -206,10 +212,10 @@
     </state>
     <state x="-1126" y="236" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1600869600977" />
     <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600762852585" />
-    <state x="-1643" y="142" width="1446" height="710" key="SettingsEditor" timestamp="1601020322115">
+    <state x="-1643" y="142" width="1446" height="710" key="SettingsEditor" timestamp="1601917130151">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1643" y="142" width="1446" height="710" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601020322115" />
+    <state x="-1643" y="142" width="1446" height="710" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601917130151" />
     <state x="277" y="142" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600763566910" />
     <state x="-1343" y="189" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600846129935">
       <screen x="-1920" y="0" width="1920" height="1040" />
