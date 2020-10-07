@@ -1263,8 +1263,12 @@
           <e p="Orion" t="Include">
             <e p="Core" t="Include">
               <e p="Animation" t="Include">
-                <e p="AnimationProxy.cs" t="Include" />
-                <e p="AnimatorProxy.cs" t="Include" />
+                <e p="AnimationAffect.cs" t="Include" />
+                <e p="AnimBoolAffect.cs" t="Include" />
+                <e p="AnimFloatAffect.cs" t="Include" />
+                <e p="AnimIntAffect.cs" t="Include" />
+                <e p="AnimTriggerAffect.cs" t="Include" />
+                <e p="IAnimatorAffect.cs" t="Include" />
               </e>
               <e p="Attributes" t="Include">
                 <e p="InlinedAttribute.cs" t="Include" />
@@ -1315,10 +1319,14 @@
               </e>
               <e p="Feedback" t="Include">
                 <e p="Effects" t="Include">
+                  <e p="AnimatorEffect.cs" t="Include" />
+                  <e p="EventEffect.cs" t="Include" />
                   <e p="LoopEffect.cs" t="Include" />
                   <e p="PauseEffect.cs" t="Include" />
                   <e p="PooledSoundEffect.cs" t="Include" />
+                  <e p="PooledVisualEffect.cs" t="Include" />
                   <e p="SoundEffect.cs" t="Include" />
+                  <e p="VisualEffect.cs" t="Include" />
                 </e>
                 <e p="Feedback.cs" t="Include" />
                 <e p="FeedbackPlayer.cs" t="Include" />
@@ -1370,6 +1378,9 @@
                 <e p="RoutineExtensions.cs" t="Include" />
               </e>
             </e>
+            <e p="Data" t="Include">
+              <e p="MonoImporterExample.txt" t="Include" />
+            </e>
             <e p="Editor" t="Include">
               <e p="Drawers" t="Include">
                 <e p="FeedbackDrawer.cs" t="Include" />
@@ -1385,6 +1396,7 @@
                 <e p="OrionGUIUtility.cs" t="Include" />
               </e>
               <e p="Windows" t="Include">
+                <e p="IconSetter.cs" t="Include" />
                 <e p="ProxyCreator.cs" t="Include" />
               </e>
             </e>

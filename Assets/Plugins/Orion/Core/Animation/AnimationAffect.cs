@@ -1,22 +1,23 @@
 ﻿using System.Collections;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEditor.Animations;
 using UnityEngine;
 
 namespace Orion
 {
-    public class AnimationProxy : AnimatorProxy
+    public struct AnimationAffect : IAnimatorAffect
     {
         #if UNITY_EDITOR
 
+        [SerializeField] private RuntimeAnimatorController controller;
+        
         private IEnumerable GetAnimations()
         {
             var list = new ValueDropdownList<int>();
-            if (controller == null)
-            {
-                list.Add("Null", 0);
-                return list;
-            }
+            list.Add("Null", 0);
+            
+            if (controller == null) return list;
 
             var editorController = controller as AnimatorController;
             foreach (var layer in editorController.layers)
@@ -31,6 +32,6 @@ namespace Orion
         [ValueDropdown("GetAnimations")]
         [SerializeField] private int animationId;
 
-        public override void Affect(Animator animator) => animator.Play(animationId);
+        public void Play(Animator animator) => animator.Play(animationId);
     }
 }

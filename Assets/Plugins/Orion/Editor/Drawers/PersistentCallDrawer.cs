@@ -31,15 +31,14 @@ namespace Orion.Editor
             OnTargetChanged(target);
             
             if (target != null && target.IsComponentHolder()) BuildHierarchy(target);
-
+            Property.Context.GetPersistent(this, $"{Property}-PersistentCall-Foldout", out parameterFoldout);
+ 
             var persistentCall = (Property.ValueEntry.WeakSmartValue as PersistentCallBase);
             if (persistentCall.Info == string.Empty) return;
             
             var splittedInfo = persistentCall.Info.Split('/');
             argTypes = new Type[splittedInfo.Length];
             for (var i = 0; i < splittedInfo.Length; i++) argTypes[i] = Type.GetType(splittedInfo[i]);
-            
-            Property.Context.GetPersistent(this, $"{((Object)Property.SerializationRoot.ValueEntry.WeakSmartValue).name}-PersistentCall-Foldout",out parameterFoldout);
         }
 
         protected override void DrawPropertyLayout(GUIContent label)

@@ -39,8 +39,8 @@ namespace Orion.Editor
         {
             base.Initialize();
             Setup();
-            
-            Property.Context.GetPersistent(this, $"{((Object)Property.SerializationRoot.ValueEntry.WeakSmartValue).name}-Proxy-Foldout",out foldout);
+
+            Property.Context.GetPersistent(this, $"{Property}-Proxy-Foldout",out foldout);
         }
 
         protected override void DrawPropertyLayout(GUIContent label)

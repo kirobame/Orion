@@ -19,7 +19,7 @@ namespace Orion.Editor
             var target = Property.ValueEntry.WeakSmartValue as Object;
             tree = PropertyTree.Create(target);
             
-            Property.Context.GetPersistent(this, $"{target.name}-Feedback-Foldout",out foldout);
+            Property.Context.GetPersistent(this, $"{target.name}-Feedback-Foldout", out foldout);
         }
 
         protected override void DrawPropertyLayout(GUIContent label)

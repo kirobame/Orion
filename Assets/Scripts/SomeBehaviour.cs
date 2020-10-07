@@ -12,5 +12,5 @@ using UnityEngine.Events;
 
 public class SomeBehaviour : SerializedMonoBehaviour
 {
-    public AnimationProxy animationProxy = new AnimationProxy();
+    public OrionEvent someEvent = new OrionEvent();
 }

@@ -9,7 +9,6 @@ namespace Orion.Editor
         protected override void DrawPropertyLayout(GUIContent label)
         {
             Property.Children.First().Draw(label);
-            //
         }
     }
 }
