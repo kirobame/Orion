@@ -11,100 +11,74 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Extensions/SystemExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Generics/WrappedValue.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/FeedbackPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Routine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/IndefiniteRoutine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Repository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/OutputPreset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/ActionRoutine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/IndefiniteRoutine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/CurvesPreset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/InstructionRoutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/TimedRoutine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/AnimatorEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Repository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/PooledVisualEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/DynamicToken.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimationAffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/VisualEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Poolable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/EventEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Unity/Projects/Workflow/Assets/Plugins/Ludiq/Ludiq.Peek/Editor/Tools/Editor/EditorPopup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/AudioFilterTracker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/LoopEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/LowpassFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/DistortionFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/PooledSoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/OrionEventDrawer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/HighpassFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/ChorusFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/EchoFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/AudioFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackPlayerEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/ReverbFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/BypassesPreset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/AudioPreset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/ProxyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/PersistentCallDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/ReverbFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Objects/ValueHolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/IconSetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/LowpassFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/HighpassFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/EchoFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/FeedbackPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/DistortionFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/ChorusFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/AudioFilterTracker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/AudioFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Objects/ExtendedRemoteValue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/ProxyCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Bundles/StandardAudioBundle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimIntAffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Bundles/AudioBundle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/IAnimatorAffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/VisualEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/OrionEventDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimTriggerAffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/SoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimBoolAffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Runtime/OrionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/AudioPoolable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/PooledVisualEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimFloatAffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Routine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/MethodSelectorAttributeDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/PooledSoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Generics/WrappedValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimationAffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/PersistentCallDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/ProxyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/DynamicToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/OrionGUIUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/LoopEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/EditorItems.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/EventEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackPlayerEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/AnimatorEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Extensions/SystemExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Poolable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/SpatializationPreset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/SoundPreset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Bundles/StandardAudioBundle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/OutputPreset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/SoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/ProxyCreator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Bundles/AudioBundle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/SpaceRumbleScripts/Audio/Bundles/AudioBundle.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/EditorItems.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/BypassesPreset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/CurvesPreset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/OrionGUIUtility.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/IAnimatorAffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/AudioPoolable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/IconSetter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Runtime/OrionEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimTriggerAffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimFloatAffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Objects/ExtendedRemoteValue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimIntAffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Objects/ValueHolder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimBoolAffect.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Feedback.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/Tokens/TokenProxy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/FeedbackPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackPlayerEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/AudioBundle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Extensions/SystemExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Utilities/OrionGUIUtility.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/AudioPreset.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/SpatializationPreset.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/SoundPreset.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/OutputPreset.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/CurvesPreset.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/BypassesPreset.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Bundles/StandardAudioBundle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Poolable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Pool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Routine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/TimedRoutine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/IndefiniteRoutine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/ActionRoutine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Implementations/InstructionRoutine.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/DistorsionFilter.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/AudioPoolable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/AudioFilter.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/ChorusFilter.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/DistortionFilter.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/EchoFilter.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/HighpassFilter.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/LowpassFilter.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/ReverbFilter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Bundles/AudioBundle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/AudioFilterTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/PooledSoundEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimatorValue.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimatorProxy.cs" />
@@ -114,16 +88,40 @@
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimationProxy.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/AnimTriggerProxy.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/SoundEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/IAnimatorAffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/LoopEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Effects/EventEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/OrionEventDrawer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/PersistentCallDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/ProxyDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Drawers/FeedbackDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/ProxyCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Editor/Windows/IconSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Animation/IAnimatorAffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/AudioFilter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Presets/AudioPreset.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Bundles/AudioBundle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Audio/Filters/AudioFilterTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Listener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/RemoteEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/RemoteVoidEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/VoidListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Events/Runtime/OrionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SomeBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/Feedback.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Feedback/FeedbackPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Pool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Pool/Poolable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Tags/Root.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/DynamicToken.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Referencer/IReferencer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Referencer/ReferencerBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Referencer/Referencer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Referencer/StackReferencer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Repository.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Management/Token.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/IProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Proxies/IProxy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Orion/Core/Routines/Routine.cs" />
       </list>
     </option>
   </component>
@@ -153,28 +151,22 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -197,11 +189,12 @@
       <workItem from="1601916825487" duration="3213000" />
       <workItem from="1602089708943" duration="2412000" />
       <workItem from="1602092152854" duration="2210000" />
+      <workItem from="1602144104243" duration="7515000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
@@ -210,13 +203,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

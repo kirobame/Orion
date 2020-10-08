@@ -7,11 +7,11 @@ namespace Orion
     public abstract class ReferencerBase : MonoBehaviour, IReferencer
     {
         public Token Token => token;
-        public Object Value => value;
-
+        
         [SerializeField] private Token token;
-        [SerializeField] private Object value;
         [SerializeField] private bool lifetimeLinkage;
+
+        public abstract object Content { get; }
         
         void OnEnable()
         {
@@ -37,7 +37,5 @@ namespace Orion
 
         protected abstract void Register();
         protected abstract void Unregister();
-
-        void IReferencer.SetValue(Object value) => this.value = value;
     }
 }

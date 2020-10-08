@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Orion
 {
+    /// <summary>
+    /// Allows to listen to any parameterless <code>RemoteEvent</code>.
+    /// </summary>
     public class VoidListener : SerializedMonoBehaviour
     {
         public OrionEvent Callback => callback;

@@ -2,6 +2,9 @@
 
 namespace Orion
 {
+    /// <summary>
+    /// Extended representation of an <code>UnityEvent</code> allowing to call much more methods as well as to pass more than one complex parameter.
+    /// </summary>
     public class OrionEvent : OrionEventBase
     {
         public event Action Call
@@ -12,6 +15,9 @@ namespace Orion
         
         private event Action runtimeAction;
         
+        /// <summary>
+        /// Calls the event.
+        /// </summary>
         public void Invoke()
         {
             runtimeAction?.Invoke();
@@ -21,6 +27,9 @@ namespace Orion
         protected override PersistentCallBase AddPersistentCall() => new PersistentCall();
     }
     
+    /// <summary>
+    /// Extended representation of an <code>UnityEvent</code> allowing to call much more methods as well as to pass more than one complex parameter.
+    /// </summary>
     public class OrionEvent<T> : OrionEventBase
     {
         public event Action<T> Call
@@ -31,6 +40,9 @@ namespace Orion
         
         private event Action<T> runtimeAction;
         
+        /// <summary>
+        /// Calls the event.
+        /// </summary>
         public void Invoke(T arg)
         {
             runtimeAction?.Invoke(arg);
@@ -48,6 +60,9 @@ namespace Orion
         }
     }
     
+    /// <summary>
+    /// Extended representation of an <code>UnityEvent</code> allowing to call much more methods as well as to pass more than one complex parameter.
+    /// </summary>
     public class OrionEvent<T1,T2> : OrionEventBase
     {
         public event Action<T1,T2>  Call
@@ -58,6 +73,9 @@ namespace Orion
         
         private event Action<T1,T2>  runtimeAction;
         
+        /// <summary>
+        /// Calls the event.
+        /// </summary>
         public void Invoke(T1 arg1, T2 arg2)
         {
             runtimeAction?.Invoke(arg1, arg2);
@@ -79,6 +97,9 @@ namespace Orion
         }
     }
     
+    /// <summary>
+    /// Extended representation of an <code>UnityEvent</code> allowing to call much more methods as well as to pass more than one complex parameter.
+    /// </summary>
     public class OrionEvent<T1,T2,T3> : OrionEventBase
     {
         public event Action<T1,T2,T3> Call
@@ -89,6 +110,9 @@ namespace Orion
         
         private event Action<T1,T2,T3> runtimeAction;
         
+        /// <summary>
+        /// Calls the event.
+        /// </summary>
         public void Invoke(T1 arg1, T2 arg2, T3 arg3)
         {
             runtimeAction?.Invoke(arg1, arg2, arg3);
@@ -111,6 +135,9 @@ namespace Orion
         }
     }
     
+    /// <summary>
+    /// Extended representation of an <code>UnityEvent</code> allowing to call much more methods as well as to pass more than one complex parameter.
+    /// </summary>
     public class OrionEvent<T1,T2,T3,T4> : OrionEventBase
     {
         public event Action<T1,T2,T3,T4> Call
@@ -121,6 +148,9 @@ namespace Orion
         
         private event Action<T1,T2,T3,T4>  runtimeAction;
         
+        /// <summary>
+        /// Calls the event.
+        /// </summary>
         public void Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4)
         {
             runtimeAction?.Invoke(arg1, arg2, arg3, arg4);

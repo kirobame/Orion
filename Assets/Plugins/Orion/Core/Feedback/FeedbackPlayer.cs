@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace Orion
 {
+    /// <summary>
+    /// Utility <code>Component</code> allowing the simple execution of many <code>Feedback</code> effects.
+    /// </summary>
     public class FeedbackPlayer : SerializedMonoBehaviour
     {
         #if UNITY_EDITOR
@@ -24,6 +27,10 @@ namespace Orion
         private Coroutine routine;
         private int currentIndex = -1;
         
+        /// <summary>
+        /// If no sequence is ongoing : 
+        /// Begin playing the <code>Feedback</code> sequence from the start.
+        /// </summary>
         [Button]
         public void Play()
         {
@@ -39,6 +46,10 @@ namespace Orion
             
             routine = StartCoroutine(feedback.GetRoutine());
         }
+        /// <summary>
+        /// If a sequence is ongoing :
+        /// Stop its execution.
+        /// </summary>
         public void Stop()
         {
             if (routine != null) StopCoroutine(routine);

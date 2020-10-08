@@ -13,4 +13,9 @@ using UnityEngine.Events;
 public class SomeBehaviour : SerializedMonoBehaviour
 {
     public OrionEvent someEvent = new OrionEvent();
+
+    void SomeMethod()
+    {
+        
+    }
 }

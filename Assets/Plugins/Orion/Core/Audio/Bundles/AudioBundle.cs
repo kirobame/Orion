@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace Orion
 {
+    /// <summary>
+    /// A collection of <code>AudioPreset</code> & <code>AudioFilter</code> which can be applied onto any <code>AudioSource</code>.
+    /// </summary>
     public abstract class AudioBundle : SerializedScriptableObject
     {
         #region UNITY_EDITOR
@@ -48,6 +51,10 @@ namespace Orion
             standardIndices = indices.ToArray();
         }
 
+        /// <summary>
+        /// Affects the passed <code>AudioSource</code> with all <code>AudioFilter</code> & <code>AudioPreset</code>.
+        /// </summary>
+        /// <param name="audioSource">The <code>AudioSource</code> to be affected.</param>
         public void AssignTo(AudioSource audioSource)
         {
             audioSource.clip = GetClip();
@@ -55,12 +62,18 @@ namespace Orion
             for (var i = 0; i < standardIndices.Length; i++) standardPresets[standardIndices[i]].Apply(audioSource);
             foreach (var preset in presets) preset.Apply(audioSource);
 
-            if (!filters.Any() && audioSource.TryGetComponent<AudioFilterTracker>(out var existingTracker)) existingTracker.Clear(audioSource);
-            else
+            if (!filters.Any())
             {
-                AudioFilterTracker tracker;
-                if (!audioSource.TryGetComponent<AudioFilterTracker>(out tracker)) tracker = audioSource.gameObject.AddComponent<AudioFilterTracker>();
-                tracker.Set(audioSource, filters);
+                AudioFilterHanlder hanlder;
+                
+                if (audioSource.TryGetComponent<AudioFilterHanlder>(out hanlder)) hanlder.Clear();
+                else
+                {
+                    hanlder = audioSource.gameObject.AddComponent<AudioFilterHanlder>();
+                    hanlder.Initialize(audioSource);
+                }
+                
+                hanlder.Set(filters);
             }
         }
         

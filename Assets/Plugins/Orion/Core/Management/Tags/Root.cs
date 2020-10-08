@@ -6,5 +6,8 @@ using UnityEngine;
 
 namespace Orion
 {
+    /// <summary>
+    /// Indicates the limitation of a local hierarchy scope.
+    /// </summary>
     public class Root : MonoBehaviour { }
 }
